@@ -9,21 +9,48 @@
 using namespace std;
 
 const string title = "##";
-string deal_english(string &str);
+string deal_english(string &str);  //处理其中的英文字符为代码高亮
+string & serial_num(string &str, int h_num);  //替换行首的序号
 
 int main(void)
 {
     string s;
     ifstream infile("temp.txt");
+    int heading_num = 0;
     while (!infile.eof())
     {
         getline(infile, s);
-        istringstream stream(s);
         string pound;
-        string content;
-        int num;
-        stream >> pound >> num >> content;
-        cout << pound << num << content << endl;
+        int pound_num = 0;
+        int content = 0;
+
+        if (!s.empty())  // jump over empty line
+        {
+            size_t dot_pos = s.find(".");
+            if ((dot_pos == string::npos) || (dot_pos > 6))  //不是单独一行不处理
+            {
+                cout << "Don't to deal: " << s << endl;
+                continue;
+            }
+            istringstream stream(s.substr(0, dot_pos));
+            stream >> pound >> pound_num;
+            if ((pound == title) && (pound_num != 0))  //处理标题行
+            {
+                heading_num = pound_num;
+
+            }
+        }
     }
+    string str1 = "1.i love chain";
+    cout << "*******" << serial_num(str1, 3) << endl;
     return 0;
+}
+
+string & serial_num(string &str, int h_num)  //替换行首的序号
+{
+    ostringstream ost;
+    ost << h_num;
+    size_t dot_pos = str.find(".");
+    str.replace(0, dot_pos, ost.str());
+    return str;
 }
