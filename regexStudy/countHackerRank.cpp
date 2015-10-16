@@ -19,7 +19,7 @@ int main() {
     {
         getline(cin,str);
         
-        if (regex_match(str, pattern))
+        if (regex_search(str, pattern))
             num++;
     }
     cout << num << endl;
