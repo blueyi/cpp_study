@@ -1,17 +1,18 @@
 #include <iostream>
-#include <string>
-using namespace std;
+#include <vector>
+
+using std::cout; using std::endl; using std::vector;
+
 int main()
 {
-    string str1, str2;
-    while(getline(cin, str1) && getline(cin, str2))
-    {
-        if (str1 == str2)
-          cout << "Equal" << endl;
-        else if (str1.size() > str2.size())
-          cout << str1 << endl;
-        else
-          cout << str2 << endl;
+    vector<int> vec1{ 0, 1, 1, 2 };
+    vector<int> vec2{ 0, 1, 2, 2, 3, 5, 8 };
+    
+    auto size = vec1.size() < vec2.size() ? vec1.size() : vec2.size();
+    for (decltype(vec1.size()) i = 0; i != size; ++i) {
+        if (vec1[i] != vec2[i]) { cout << "false" << endl; break; }
+        if (i == size - 1) cout << "true" << endl;
     }
+    
     return 0;
 }
