@@ -1,18 +1,23 @@
+
 #include <iostream>
-#include <vector>
+#include <stdexcept>
+using std::cin; using std::cout; using std::endl; using std::runtime_error;
 
-using std::cout; using std::endl; using std::vector;
-
-int main()
+int main(void)
 {
-    vector<int> vec1{ 0, 1, 1, 2 };
-    vector<int> vec2{ 0, 1, 2, 2, 3, 5, 8 };
-    
-    auto size = vec1.size() < vec2.size() ? vec1.size() : vec2.size();
-    for (decltype(vec1.size()) i = 0; i != size; ++i) {
-        if (vec1[i] != vec2[i]) { cout << "false" << endl; break; }
-        if (i == size - 1) cout << "true" << endl;
+    for (int i, j; cout << "Input two integers:\n", cin >> i >> j; )
+    {
+        try 
+        {
+            if (j == 0) 
+                throw runtime_error("divisor is 0");
+            cout << i / j << endl;
+        }
+        catch (runtime_error err) 
+        {
+            cout << err.what() << "\n";
+        }
     }
-    
+
     return 0;
 }
