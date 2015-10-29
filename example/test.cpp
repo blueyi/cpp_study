@@ -1,19 +1,16 @@
-#include<iostream>
-#include<cstring>
-#include<vector>
-#include<string>
-
-int main(void)
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[])
 {
-    using namespace std;
-
-    cout << "Enter your string:" << endl;
-    string str;
-    getline(cin,str);
-    const size_t slen = str.length() + 1;
-    char *pstr =  new char[slen];
-    strncpy(pstr, str.c_str(), slen);
-    cout << pstr << endl;
-    delete [] pstr;
-    return 0;
+char c[5]="今天";
+cout<<c<<endl;
+for(int i=0;i<4;++i)
+   cout<<int(c[i])<<endl;
+char ch[2]={-67,-15};
+ch[0] ^= 2;
+ch[0] -= 100;
+ch[1] ^= 1;
+ch[1] -= 100;
+cout<<ch<<endl;
+return 0;
 }
