@@ -30,6 +30,7 @@ int main()
         std::cout << "jde: " << *i << std::endl;
     for (auto i = ode.cbegin(); i != ode.cend(); ++i)
         std::cout << "ode: " << *i << std::endl;
+    std::cout << jde.max_size()  << std::endl;
     return 0;
 }
 
