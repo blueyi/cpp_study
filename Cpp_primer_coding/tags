@@ -107,6 +107,7 @@ Quote	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.h	/^    Quote(const std::st
 Quote	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.h	/^class Quote {$/;"	c	language:C++
 SALESITEM_H	ex_Sales_item.h	/^#define SALESITEM_H$/;"	d
 SALES_DATA_H	ex_Sales_data.h	/^#define SALES_DATA_H$/;"	d
+STRBLOB_H	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^#define STRBLOB_H$/;"	d	language:C++
 Sales_data	ex_7_01.cpp	/^struct Sales_data {$/;"	s	file:
 Sales_data	ex_7_2.cpp	/^struct Sales_data {$/;"	s	file:
 Sales_data	ex_7_2.h	/^struct Sales_data {$/;"	s
@@ -147,6 +148,11 @@ Sales_item::isbn	ex_Sales_item.h	/^    std::string isbn() const { return bookNo;
 Sales_item::operator +=	ex_Sales_item.h	/^Sales_item& Sales_item::operator+=(const Sales_item& rhs) $/;"	f	class:Sales_item
 Sales_item::revenue	ex_Sales_item.h	/^    double revenue = 0.0;$/;"	m	class:Sales_item
 Sales_item::units_sold	ex_Sales_item.h	/^    unsigned units_sold = 0; \/\/ explicitly initialized$/;"	m	class:Sales_item
+StrBlob	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^StrBlob::StrBlob() : data(std::make_shared<std::vector<std::string>>()) {}$/;"	f	language:C++	class:StrBlob
+StrBlob	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^StrBlob::StrBlob(std::initializer_list<std::string> li) : data(std::make_shared<std::vector<std::string>>(li)) {}$/;"	f	language:C++	class:StrBlob
+StrBlob	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    StrBlob();$/;"	p	language:C++	class:StrBlob
+StrBlob	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    StrBlob(std::initializer_list<std::string> il);$/;"	p	language:C++	class:StrBlob
+StrBlob	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^class StrBlob {$/;"	c	language:C++
 X	ex_15_13.cpp	/^        X() {std::cout << " X() " << std::endl;}$/;"	f	class:X
 X	ex_15_13.cpp	/^        X(const X&) {std::cout << " X(const X&) " << std::endl;}$/;"	f	class:X
 X	ex_15_13.cpp	/^class X {$/;"	c	file:
@@ -167,6 +173,10 @@ add_to_folders	Message_Folder.cpp	/^void Message::add_to_folders(const Message &
 add_to_messages	Message_Folder.cpp	/^void Folder::add_to_messages(const Folder &f)$/;"	f	class:Folder
 address	ex_person.h	/^    std::string address;$/;"	m	class:Person
 avg_price	ex_Sales_item.h	/^double Sales_item::avg_price() const$/;"	f	class:Sales_item
+back	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^std::string& StrBlob::back() const$/;"	f	language:C++	class:StrBlob
+back	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    std::string& back() const;$/;"	p	language:C++	class:StrBlob
+begin	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^std::vector<std::string>::iterator StrBlob::begin()$/;"	f	language:C++	class:StrBlob
+begin	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    std::vector<std::string>::iterator begin();$/;"	p	language:C++	class:StrBlob
 biggies	ex_10_16.cpp	/^void biggies(std::vector<std::string> &words, std::vector<std::string>::size_type sz)$/;"	f
 bookNo	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.h	/^    std::string bookNo;$/;"	m	language:C++	class:Quote
 bookNo	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.h	/^    std::string bookNo;$/;"	m	language:C++	class:Quote
@@ -177,6 +187,9 @@ bookNo	ex_7_w.h	/^    string bookNo;$/;"	m	struct:Sales_data
 bookNo	ex_Sales_data.h	/^    std::string bookNo;$/;"	m	struct:Sales_data
 bookNo	ex_Sales_item.h	/^    std::string bookNo;      \/\/ implicitly initialized to the empty string$/;"	m	class:Sales_item
 buildMap	ex_words_transform.cpp	/^std::map<std::string, std::string> buildMap(std::ifstream &mapfile)$/;"	f
+check	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^void StrBlob::check(size_type i, const std::string &msg) const$/;"	f	language:C++	class:StrBlob
+check	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    void check(size_type i, const std::string &msg) const;$/;"	p	language:C++	class:StrBlob
+cin_vec	E:\study\CPP\cpp_study\Cpp_primer_coding\new_test.cpp	/^void cin_vec(std::shared_ptr<std::vector<int>>  vec)$/;"	f	language:C++
 clone	/home/blueyi/cpp_study/Cpp_primer_coding/Bulk_quote.h	/^    Bulk_quote* clone()  && { return new Bulk_quote(std::move(*this)); }$/;"	f	language:C++	class:Bulk_quote
 clone	/home/blueyi/cpp_study/Cpp_primer_coding/Bulk_quote.h	/^    Bulk_quote* clone() const & { return new Bulk_quote(*this); }$/;"	f	language:C++	class:Bulk_quote
 clone	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.h	/^    virtual Quote* clone()  && { return new Quote(std::move(*this));}$/;"	f	language:C++	class:Quote
@@ -189,11 +202,16 @@ compare	/home/blueyi/cpp_study/Cpp_primer_coding/comp_template.h	/^template<unsi
 compare	/home/blueyi/cpp_study/Cpp_primer_coding/notype_tem.cpp	/^template<unsigned N, unsigned M> int compare(const char (&p1)[N], const char (&p2)[M])$/;"	f	language:C++
 compareIsbn	ex_Sales_item.h	/^bool compareIsbn(const Sales_item &lhs, const Sales_item &rhs) $/;"	f
 contents	Message_Folder.h	/^    std::string contents;$/;"	m	class:Message
+cout_vec	E:\study\CPP\cpp_study\Cpp_primer_coding\new_test.cpp	/^void cout_vec(std::shared_ptr<std::vector<int>>  vec)$/;"	f	language:C++
+data	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    std::shared_ptr<std::vector<std::string>> data;$/;"	m	language:C++	class:StrBlob
 discount	/home/blueyi/cpp_study/Cpp_primer_coding/Disc_quote.h	/^    double discount = 0.0;$/;"	m	language:C++	class:Disc_quote
 discount	E:\study\CPP\cpp_study\Cpp_primer_coding\Bulk_quote.h	/^    double discount = 0.0;$/;"	m	language:C++	class:Bulk_quote
 elimDups	ex_10_11.cpp	/^void elimDups(std::vector<std::string> &words) $/;"	f
 elimDups	ex_10_16.cpp	/^void elimDups(std::vector<std::string> &words)$/;"	f
 elimDups	ex_10_9.cpp	/^void elimDups(std::vector<std::string> &words) $/;"	f
+empty	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    bool empty() const { return data->empty(); }$/;"	f	language:C++	class:StrBlob
+end	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^std::vector<std::string>::iterator StrBlob::end()$/;"	f	language:C++	class:StrBlob
+end	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    std::vector<std::string>::iterator end();$/;"	p	language:C++	class:StrBlob
 ex_10_1.cpp	ex_10_1.cpp	1;"	F
 ex_10_11.cpp	ex_10_11.cpp	1;"	F
 ex_10_13.cpp	ex_10_13.cpp	1;"	F
@@ -278,6 +296,8 @@ fact	ex_6_4.cpp	/^int fact(int num)$/;"	f
 fcn3	ex_testLambda.cpp	/^void fcn3()$/;"	f
 find	ex_9_4.cpp	/^std::vector<int>::const_iterator find(std::vector<int>::const_iterator start, std::vector<int>::const_iterator last, int val)$/;"	f
 folders	Message_Folder.h	/^    std::set<Folder *> folders;$/;"	m	class:Message
+front	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^std::string& StrBlob::front() const $/;"	f	language:C++	class:StrBlob
+front	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    std::string& front() const;$/;"	p	language:C++	class:StrBlob
 func	ex_10_21.cpp	/^void func(int &num)$/;"	f
 func	ex_6_7.cpp	/^int func()$/;"	f
 getAddress	ex_person.h	/^    std::string const& getAddress() const { return address; }$/;"	f	class:Person::std
@@ -299,6 +319,8 @@ main	/home/blueyi/cpp_study/Cpp_primer_coding/notype_tem.cpp	/^int main()$/;"	f	
 main	/home/blueyi/cpp_study/Cpp_primer_coding/quote_basket.cpp	/^int main()$/;"	f	language:C++
 main	/home/blueyi/cpp_study/Cpp_primer_coding/quote_vector.cpp	/^int main()$/;"	f	language:C++
 main	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.cpp	/^int main()$/;"	f	language:C++
+main	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^int main()$/;"	f	language:C++
+main	E:\study\CPP\cpp_study\Cpp_primer_coding\new_test.cpp	/^int main()$/;"	f	language:C++
 main	Message_Folder.cpp	/^int main()$/;"	f
 main	ex_10_1.cpp	/^int main()$/;"	f
 main	ex_10_11.cpp	/^int main()$/;"	f
@@ -395,6 +417,7 @@ net_price	/home/blueyi/cpp_study/Cpp_primer_coding/quote_vector.cpp	/^double Bul
 net_price	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.cpp	/^double Bulk_quote::net_price(std::size_t n) const$/;"	f	language:C++	class:Bulk_quote
 net_price	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.cpp	/^double Limit_quote::net_price(std::size_t n) const$/;"	f	language:C++	class:Limit_quote
 net_price	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.h	/^    virtual double net_price(std::size_t n) const { return price * n; }$/;"	f	language:C++	class:Quote
+new_vec	E:\study\CPP\cpp_study\Cpp_primer_coding\new_test.cpp	/^std::shared_ptr<std::vector<int>>  new_vec()$/;"	f	language:C++
 numbered	ex_13_17.cpp	/^        numbered()$/;"	f	class:numbered
 numbered	ex_13_17.cpp	/^class numbered {$/;"	c	file:
 numbered::mysn	ex_13_17.cpp	/^        int mysn;$/;"	m	class:numbered	file:
@@ -413,6 +436,8 @@ override	/home/blueyi/cpp_study/Cpp_primer_coding/Bulk_quote.h	/^    double net_
 override	/home/blueyi/cpp_study/Cpp_primer_coding/Limit_quote.h	/^    double net_price(std::size_t n) const override;$/;"	m	language:C++	class:Limit_quote
 override	E:\study\CPP\cpp_study\Cpp_primer_coding\Bulk_quote.h	/^    double net_price(std::size_t) const override;$/;"	m	language:C++	class:Bulk_quote
 override	E:\study\CPP\cpp_study\Cpp_primer_coding\Limit_quote.h	/^    double net_price(std::size_t n) const override;$/;"	m	language:C++	class:Limit_quote
+pop_back	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^void StrBlob::pop_back()$/;"	f	language:C++	class:StrBlob
+pop_back	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    void pop_back();$/;"	p	language:C++	class:StrBlob
 price	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.h	/^    double price = 0.0;$/;"	m	language:C++	class:Quote
 price	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.h	/^    double price = 0.0;$/;"	m	language:C++	class:Quote
 print	ex_6_47.cpp	/^void print(vector<int> &vec)$/;"	f
@@ -430,6 +455,7 @@ printfolders	Message_Folder.cpp	/^void Message::printfolders()$/;"	f	class:Messa
 printmsg	Message_Folder.cpp	/^void Folder::printmsg()$/;"	f	class:Folder
 printtxt	Message_Folder.cpp	/^void Message::printtxt()$/;"	f	class:Message
 ps	ex_hasptr.cpp	/^    std::string *ps;$/;"	m	class:HasPtr	file:
+push_back	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    void push_back(const std::string &t) { data->push_back(t); }$/;"	f	language:C++	class:StrBlob
 py	ex_7_31.h	/^    Y *py = nullptr;$/;"	m	class:X
 quantity	/home/blueyi/cpp_study/Cpp_primer_coding/Disc_quote.h	/^    std::size_t quantity = 0;$/;"	m	language:C++	class:Disc_quote
 read	ex_Sales_data.h	/^std::istream &read(std::istream &is, Sales_data &item)$/;"	f
@@ -450,6 +476,8 @@ revenue	ex_Sales_item.h	/^    double revenue = 0.0;$/;"	m	class:Sales_item
 s_increment	ex_13_18.cpp	/^int Employee::s_increment = 1;$/;"	m	class:Employee	file:
 s_increment	ex_13_18.h	/^        static int s_increment;$/;"	m	class:Employee
 save	Message_Folder.cpp	/^void Message::save(Folder &f)$/;"	f	class:Message
+size	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    size_type size() const { return data->size(); }$/;"	f	language:C++	class:StrBlob
+size_type	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    typedef std::vector<std::string>::size_type size_type;$/;"	t	language:C++	class:StrBlob
 strfunc	ex_6_36.cpp	/^string (&strfunc())[10]$/;"	f
 swap	Message_Folder.cpp	/^void swap(Folder &lhs, Folder &rhs)$/;"	f
 swap	Message_Folder.cpp	/^void swap(Message &lhs, Message &rhs)$/;"	f
