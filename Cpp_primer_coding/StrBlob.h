@@ -11,8 +11,11 @@
 #include <string>
 #include <memory>
 
+class StrBlobPtr;
+
 class StrBlob {
 public:
+    friend class StrBlobPtr;
     typedef std::vector<std::string>::size_type size_type;
     StrBlob();
     StrBlob(std::initializer_list<std::string> il);
@@ -23,8 +26,11 @@ public:
 
     std::string& front() const;
     std::string& back() const;
-    std::vector<std::string>::iterator begin();
-    std::vector<std::string>::iterator end();
+
+    StrBlobPtr begin();
+    StrBlobPtr end();
+//    std::vector<std::string>::iterator begin();
+//    std::vector<std::string>::iterator end();
 
 private:
     std::shared_ptr<std::vector<std::string>> data;
