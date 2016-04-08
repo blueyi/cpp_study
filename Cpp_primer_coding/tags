@@ -97,8 +97,11 @@ Person::address	ex_person.h	/^    std::string address;$/;"	m	class:Person
 Person::name	ex_person.h	/^    std::string name;$/;"	m	class:Person
 Person::std::getAddress	ex_person.h	/^    std::string const& getAddress() const { return address; }$/;"	f	class:Person::std
 Person::std::getName	ex_person.h	/^    std::string const& getName() const { return name; }$/;"	f	class:Person::std
+QUERYRESULT_H	E:\study\CPP\cpp_study\Cpp_primer_coding\QueryResult.h	9;"	d	language:C++
 QUOTE_H	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.h	9;"	d	language:C++
 QUOTE_H	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.h	/^#define QUOTE_H$/;"	d	language:C++
+QueryResult	E:\study\CPP\cpp_study\Cpp_primer_coding\QueryResult.h	/^    QueryResult(std::string w, std::shared_ptr<std::set<TextQuery::line_no>> l, std::shared_ptr<std::vector<std::string>> t) : word(w), lines(l), text(t) {};$/;"	f	language:C++	class:QueryResult
+QueryResult	E:\study\CPP\cpp_study\Cpp_primer_coding\QueryResult.h	/^class QueryResult {$/;"	c	language:C++
 Quote	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.h	/^    Quote() = default;$/;"	p	language:C++	class:Quote
 Quote	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.h	/^    Quote(const std::string &book, double sales_price) : bookNo(book), price(sales_price) {}$/;"	f	language:C++	class:Quote
 Quote	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.h	/^class Quote {$/;"	c	language:C++
@@ -163,6 +166,9 @@ StrBlob	e:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^class StrBlob {$/;"
 StrBlobPtr	e:\study\CPP\cpp_study\Cpp_primer_coding\StrBlobPtr.h	/^    StrBlobPtr() : curr(0) {}$/;"	f	language:C++	class:StrBlobPtr
 StrBlobPtr	e:\study\CPP\cpp_study\Cpp_primer_coding\StrBlobPtr.h	/^    StrBlobPtr(StrBlob &a, std::size_t sz = 0) : wptr(a.data), curr(sz) {}$/;"	f	language:C++	class:StrBlobPtr
 StrBlobPtr	e:\study\CPP\cpp_study\Cpp_primer_coding\StrBlobPtr.h	/^class StrBlobPtr {$/;"	c	language:C++
+TEXTQUERY_H	E:\study\CPP\cpp_study\Cpp_primer_coding\TextQuery.h	/^#define TEXTQUERY_H$/;"	d	language:C++
+TextQuery	E:\study\CPP\cpp_study\Cpp_primer_coding\TextQuery.cpp	/^TextQuery::TextQuery(std::ifstream &in) : text(new std::vector<std::string>)$/;"	f	language:C++	class:TextQuery
+TextQuery	E:\study\CPP\cpp_study\Cpp_primer_coding\TextQuery.h	/^class TextQuery {$/;"	c	language:C++
 X	ex_15_13.cpp	/^        X() {std::cout << " X() " << std::endl;}$/;"	f	class:X
 X	ex_15_13.cpp	/^        X(const X&) {std::cout << " X(const X&) " << std::endl;}$/;"	f	class:X
 X	ex_15_13.cpp	/^class X {$/;"	c	file:
@@ -344,6 +350,7 @@ isbn	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.h	/^    std::string isbn() c
 isbn	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.h	/^    std::string isbn() const { return bookNo; }$/;"	f	language:C++	class:Quote
 isbn	ex_Sales_data.h	/^    std::string isbn() const { return bookNo; };$/;"	f	struct:Sales_data
 isbn	ex_Sales_item.h	/^    std::string isbn() const { return bookNo; }$/;"	f	class:Sales_item
+lines	E:\study\CPP\cpp_study\Cpp_primer_coding\QueryResult.h	/^    std::shared_ptr<std::set<TextQuery::line_no>> lines;$/;"	m	language:C++	class:QueryResult
 main	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.cpp	/^int main()$/;"	f	language:C++
 main	/home/blueyi/cpp_study/Cpp_primer_coding/comp_template.cpp	/^int main()$/;"	f	language:C++
 main	/home/blueyi/cpp_study/Cpp_primer_coding/notype_tem.cpp	/^int main()$/;"	f	language:C++
@@ -351,6 +358,7 @@ main	/home/blueyi/cpp_study/Cpp_primer_coding/quote_basket.cpp	/^int main()$/;"	
 main	/home/blueyi/cpp_study/Cpp_primer_coding/quote_vector.cpp	/^int main()$/;"	f	language:C++
 main	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.cpp	/^int main()$/;"	f	language:C++
 main	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^int main()$/;"	f	language:C++
+main	E:\study\CPP\cpp_study\Cpp_primer_coding\TextQuery.cpp	/^int main()$/;"	f	language:C++
 main	E:\study\CPP\cpp_study\Cpp_primer_coding\new_test.cpp	/^int main()$/;"	f	language:C++
 main	Message_Folder.cpp	/^int main()$/;"	f
 main	e:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^int main()$/;"	f	language:C++
@@ -477,6 +485,8 @@ pop_back	e:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.cpp	/^void StrBlob::po
 pop_back	e:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    void pop_back();$/;"	p	language:C++	class:StrBlob
 price	/home/blueyi/cpp_study/Cpp_primer_coding/Quote.h	/^    double price = 0.0;$/;"	m	language:C++	class:Quote
 price	E:\study\CPP\cpp_study\Cpp_primer_coding\Quote.h	/^    double price = 0.0;$/;"	m	language:C++	class:Quote
+print	E:\study\CPP\cpp_study\Cpp_primer_coding\QueryResult.h	/^    friend std::ostream& print(std::ostream &, const QueryResult&);$/;"	p	language:C++	class:QueryResult
+print	E:\study\CPP\cpp_study\Cpp_primer_coding\TextQuery.cpp	/^std::ostream& print (std::ostream &os, const QueryResult &qr)$/;"	f	language:C++
 print	ex_6_47.cpp	/^void print(vector<int> &vec)$/;"	f
 print	ex_8_1.cpp	/^std::istream& print(std::istream& in)$/;"	f
 print	ex_8_9.cpp	/^std::istringstream& print(std::istringstream& in)$/;"	f
@@ -496,6 +506,8 @@ push_back	E:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    void push_bac
 push_back	e:\study\CPP\cpp_study\Cpp_primer_coding\StrBlob.h	/^    void push_back(const std::string &t) { data->push_back(t); }$/;"	f	language:C++	class:StrBlob
 py	ex_7_31.h	/^    Y *py = nullptr;$/;"	m	class:X
 quantity	/home/blueyi/cpp_study/Cpp_primer_coding/Disc_quote.h	/^    std::size_t quantity = 0;$/;"	m	language:C++	class:Disc_quote
+query	E:\study\CPP\cpp_study\Cpp_primer_coding\TextQuery.cpp	/^QueryResult TextQuery::query(const std::string &word) const$/;"	f	language:C++	class:TextQuery
+query	E:\study\CPP\cpp_study\Cpp_primer_coding\TextQuery.h	/^    QueryResult query(const std::string &word) const;$/;"	p	language:C++	class:TextQuery
 read	ex_Sales_data.h	/^std::istream &read(std::istream &is, Sales_data &item)$/;"	f
 read	ex_person.h	/^std::istream& read(std::istream &is, Person &one)$/;"	f
 remFldr	Message_Folder.h	/^    void remFldr(Folder *f) {folders.erase(f);}$/;"	f	class:Message
@@ -505,6 +517,7 @@ remove_from_folders	Message_Folder.cpp	/^void Message::remove_from_folders()$/;"
 remove_from_messages	Message_Folder.cpp	/^void Folder::remove_from_messages()$/;"	f	class:Folder
 replacestr	ex_9_43.cpp	/^void replacestr(std::string &s, std::string const &oldVal, std::string const newVal)$/;"	f
 replacestr	ex_9_44.cpp	/^void replacestr(std::string &s, std::string const &oldVal, std::string const newVal)$/;"	f
+result	E:\study\CPP\cpp_study\Cpp_primer_coding\TextQuery.h	/^    std::map<std::string, std::shared_ptr<std::set<line_no>>> result;$/;"	m	language:C++	class:TextQuery
 revenue	ex_7_01.cpp	/^    double revenue = 0.0;$/;"	m	struct:Sales_data	file:
 revenue	ex_7_2.cpp	/^    double revenue = 0.0;$/;"	m	struct:Sales_data	file:
 revenue	ex_7_2.h	/^    double revenue = 0.0;$/;"	m	struct:Sales_data
@@ -522,6 +535,8 @@ strfunc	ex_6_36.cpp	/^string (&strfunc())[10]$/;"	f
 swap	Message_Folder.cpp	/^void swap(Folder &lhs, Folder &rhs)$/;"	f
 swap	Message_Folder.cpp	/^void swap(Message &lhs, Message &rhs)$/;"	f
 swap	ex_6_10.cpp	/^void swap(int &a, int &b)$/;"	f
+text	E:\study\CPP\cpp_study\Cpp_primer_coding\QueryResult.h	/^    std::shared_ptr<std::vector<std::string>> text;$/;"	m	language:C++	class:QueryResult
+text	E:\study\CPP\cpp_study\Cpp_primer_coding\TextQuery.h	/^    std::shared_ptr<std::vector<std::string>> text;$/;"	m	language:C++	class:TextQuery
 total_receipt	/home/blueyi/cpp_study/Cpp_primer_coding/Basket.h	/^    double total_receipt(std::ostream&) const;$/;"	p	language:C++	class:Basket
 total_receipt	/home/blueyi/cpp_study/Cpp_primer_coding/quote_basket.cpp	/^double Basket::total_receipt(std::ostream& os) const$/;"	f	language:C++	class:Basket
 transform	ex_words_transform.cpp	/^void transform(std::ifstream &infile, std::ifstream &mapfile)$/;"	f
@@ -534,6 +549,7 @@ units_sold	ex_Sales_data.h	/^    unsigned units_sold = 0;$/;"	m	struct:Sales_dat
 units_sold	ex_Sales_item.h	/^    unsigned units_sold = 0; \/\/ explicitly initialized$/;"	m	class:Sales_item
 use	ex_hasptr.cpp	/^    std::size_t *use;$/;"	m	class:HasPtr	file:
 vecequal	ex_9_15.cpp	/^bool vecequal(std::vector<int> vec1, std::vector<int> vec2)$/;"	f
+word	E:\study\CPP\cpp_study\Cpp_primer_coding\QueryResult.h	/^    std::string word;$/;"	m	language:C++	class:QueryResult
 wptr	e:\study\CPP\cpp_study\Cpp_primer_coding\StrBlobPtr.h	/^    std::weak_ptr<std::vector<std::string>> wptr;$/;"	m	language:C++	class:StrBlobPtr
 x_obj	ex_7_31.h	/^    X x_obj;$/;"	m	class:Y
 ~Bulk_quote	/home/blueyi/cpp_study/Cpp_primer_coding/Bulk_quote.h	/^    virtual ~Bulk_quote() = default;$/;"	p	language:C++	class:Bulk_quote
